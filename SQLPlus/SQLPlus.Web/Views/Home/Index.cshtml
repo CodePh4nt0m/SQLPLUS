@@ -12,63 +12,43 @@
             <div class="panel-body">
                 <table class="table table-hover">
                     <thead>
-                        <tr>
-                            <th><input type="checkbox" /></th>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
+                    <tr>
+                        <th><input type="checkbox"/></th>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td>1</td>
-                            <td>SaveCampaignForMarketing</td>
-                            <td><input type="button" value="Generate" class="btn btn-xs btn-success" /></td>
-                            <td>
-                                <select class="form-control form-group-margin">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td>1</td>
-                            <td>SaveCampaignForMarketing</td>
-                            <td><input type="button" value="Generate" class="btn btn-xs btn-success" /></td>
-                            <td>
-                                <select class="form-control form-group-margin">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td>1</td>
-                            <td>SaveCampaignForMarketing</td>
-                            <td><input type="button" value="Generate" class="btn btn-xs btn-success" /></td>
-                            <td>
-                                <select class="form-control form-group-margin">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>1</td>
+                        <td>SaveCampaignForMarketing</td>
+                        <td><input type="button" value="Generate" class="btn btn-xs btn-success" onclick="showscript()"/></td>
+                        <td>
+                            <select class="form-control form-group-margin">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+
+
+@section scripts{
+    <script>
+        function showscript() {
+            window.open("/Script/Viewer", "_blank",
+                "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=50,width=800,height=600");
+        }
+    </script>
+}
