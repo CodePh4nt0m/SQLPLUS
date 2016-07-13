@@ -1,0 +1,61 @@
+﻿
+/* whirl standard rotation animation used for duo, double-up etc. */
+@-webkit-keyframes standard {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes standard {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*whirl bar follow - a simple strafing bar animation that follows itself*/
+
+.sqp-loader::before{
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #999999;
+    opacity: 0.6;
+}
+.sqp-loader::after {
+    z-index: 2;
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    -webkit-transition: all .75s ease 0s;
+    transition: all .75s ease 0s;
+    border-radius: 100%;
+    -webkit-animation: standard .75s infinite linear;
+    animation: standard .75s infinite linear;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+
+    border-right: 4px solid #F3F4F5;
+    border-left: 4px solid #F3F4F5;
+    border-top: 4px solid #005FA2;
+    border-bottom: 4px solid #F3F4F5;
+}

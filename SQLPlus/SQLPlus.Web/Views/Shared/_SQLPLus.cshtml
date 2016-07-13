@@ -32,12 +32,7 @@ Use search to find needed section.
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
 
     <!-- Pixel Admin's stylesheets -->
-    <link href="~/stylesheets/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/stylesheets/pixel-admin.min.css" rel="stylesheet" />
-    <link href="~/stylesheets/widgets.min.css" rel="stylesheet" />
-    <link href="~/stylesheets/pages.min.css" rel="stylesheet" />
-    <link href="~/stylesheets/rtl.min.css" rel="stylesheet" />
-    <link href="~/stylesheets/themes.min.css" rel="stylesheet" />
+    @Styles.Render("~/styles/pixeladmin")
     <!-- SQL Plus stylesheets -->
     <link href="~/stylesheets/sqlplus/sqlplus.css" rel="stylesheet" />
     <!--[if lt IE 9]>
@@ -61,7 +56,7 @@ Use search to find needed section.
     * 'main-menu-fixed'    - Fixes the main menu
     * 'main-menu-animated' - Animate main menu
 -->
-<body class="theme-default main-menu-animated">
+<body class="theme-default main-menu-animated @ViewBag.BodyClasses">
 
     <script>var init = [];</script>
     <!-- Demo script -->
@@ -224,13 +219,13 @@ Use search to find needed section.
         <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">'+"<"+"/script>"); </script>
     <![endif]-->
 
-    <script src="~/javascripts/jquery.transit.min.js"></script>
+    
 
     <!-- Pixel Admin's javascripts -->
-
-    <script src="~/javascripts/bootstrap.min.js"></script>
-    <script src="~/javascripts/pixel-admin.min.js"></script>
-
+    @Scripts.Render("~/bundles/pixeladmin")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/director")
+    @Scripts.Render("~/bundles/app")
     <script type="text/javascript">
         init.push(function () {
             // Javascript code here

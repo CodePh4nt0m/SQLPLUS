@@ -1,0 +1,30 @@
+﻿@using SQLPlus.Web.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_BlankLayout.cshtml";
+    ViewBag.BodyClasses = "theme-default page-signin-alt loader-inner ball-scale-multiple";
+}
+
+@section styles{
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            font-size: 16px;
+            background: #ed5565 !important;
+            color: #fff;
+            font-family: 'Source Sans Pro';
+        }
+    </style>
+}
+
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('main').className += 'loaded';
+        });
+    </script>
+}

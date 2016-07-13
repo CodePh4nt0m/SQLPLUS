@@ -2,62 +2,59 @@
 @model LoginViewModel
 @{
     ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_BlankLayout.cshtml";
+    ViewBag.BodyClasses = "theme-default page-signin-alt";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
-            }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
+
+@section styles{
+    <link href="~/Plugins/custom/myloader/myloader.css" rel="stylesheet" />
+}
+<!-- 2. $MAIN_NAVIGATION ===========================================================================
+
+    Main navigation
+-->
+<div class="signin-header">
+    <a href="index.html" class="logo">
+        <div class="demo-logo bg-primary"><img src="~/demo/logo-big.png" alt="" style="margin-top: -4px;"></div>&nbsp;
+        <strong>SQL+</strong>
+    </a> <!-- / .logo -->
+    @*<a href="pages-signup-alt.html" class="btn btn-primary">Sign Up</a>*@
+</div> <!-- / .header -->
+
+<h1 class="form-header">Sign in to your Account</h1>
+
+<div class="" id="login_content">
+    <!-- Form -->
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "panel", role = "form", @id = "formLogin" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <input type="text" class="form-control input-lg" placeholder="Username" data-bind="value:Username"/>
+        </div> <!-- / Username -->
+
+        <div class="form-group signin-password">
+            <input type="password" class="form-control input-lg" placeholder="Password" data-bind="value:Password"/>
+            <a href="#" class="forgot">Forgot?</a>
+        </div> <!-- / Password -->
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input class="px" type="checkbox" id="RememberMe" name="RememberMe" data-bind="checked:RememberMe">
+                <span class="lbl">Remember Me</span>
+            </label>
+        </div>
+        <div class="form-actions">
+            <input type="button" value="Sign In" class="btn btn-primary btn-block btn-lg" data-bind="click:function(){return Login()}">
+        </div> <!-- / .form-actions -->
+    }
+
 </div>
 
+<!-- / Form -->
+
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        var retunUrl = '@ViewBag.ReturnUrl'
+    </script>
+    <script src="~/Scripts/app/pages/login.js"></script>
 }

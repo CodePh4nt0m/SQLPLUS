@@ -14,12 +14,27 @@ namespace SQLPlus.Web.Controllers
             return View();
         }
 
-        public ActionResult Spinner()
+        public ActionResult PaypalSpinner()
         {
             return View();
         }
 
-        public ActionResult Spinner2()
+        public ActionResult SpintKit1()
+        {
+            return View();
+        }
+
+        public ActionResult SpintKitDot()
+        {
+            return View();
+        }
+
+        public ActionResult Loader()
+        {
+            return View();
+        }
+
+        public ActionResult whirl()
         {
             return View();
         }

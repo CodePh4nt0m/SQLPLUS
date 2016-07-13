@@ -7,6 +7,7 @@ using SQLPlus.Web.Models.ViewModels;
 
 namespace SQLPlus.Web.Controllers
 {
+    [Authorize]
     public class ScriptController : Controller
     {
         // GET: Script

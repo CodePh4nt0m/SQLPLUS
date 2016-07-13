@@ -224,6 +224,7 @@
     <Content Include="assets\plugins\spinner\spinkit.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\styles\paypal-loader.css" />
     <Content Include="demo\avatars\1.jpg" />
     <Content Include="demo\avatars\2.jpg" />
     <Content Include="demo\avatars\3.jpg" />
@@ -284,8 +285,17 @@
     <Content Include="javascripts\jquery.transit.min.js" />
     <Content Include="javascripts\pixel-admin.js" />
     <Content Include="javascripts\pixel-admin.min.js" />
+    <Content Include="Plugins\custom\myloader\myloader.css" />
+    <Content Include="Plugins\loader\loaders.css" />
+    <Content Include="Plugins\loader\loaders.css.js" />
+    <Content Include="Plugins\loader\loaders.min.css" />
+    <Content Include="Plugins\whirl\whirl.css" />
+    <Content Include="Plugins\whirl\whirl.min.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\pages\login.js" />
+    <Content Include="Scripts\app\routes.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="demo\less\bootstrap-mixins.less" />
@@ -293,14 +303,19 @@
     <Content Include="demo\less\colors.less" />
     <Content Include="demo\less\mixins.less" />
     <Content Include="demo\less\variables.less" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\director.js" />
+    <Content Include="Scripts\director.min.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.4.0.debug.js" />
+    <Content Include="Scripts\knockout-3.4.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -338,7 +353,7 @@
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Login_bk.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
@@ -355,8 +370,12 @@
     <Content Include="Views\Shared\_SQLPLus.cshtml" />
     <Content Include="Views\Script\Viewer.cshtml" />
     <Content Include="Views\Shared\_BlankLayout.cshtml" />
-    <Content Include="Views\Test\Spinner.cshtml" />
-    <Content Include="Views\Test\Spinner2.cshtml" />
+    <Content Include="Views\Test\PaypalSpinner.cshtml" />
+    <Content Include="Views\Test\SpintKit1.cshtml" />
+    <Content Include="Views\Test\SpintKitDot.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Test\Loader.cshtml" />
+    <Content Include="Views\Test\whirl.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -368,7 +387,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQLPlus.Business\SQLPlus.Business.csproj">
+      <Project>{23b0e513-60a0-41ba-9ac4-f274d5f16946}</Project>
+      <Name>SQLPlus.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLPlus.Models\SQLPlus.Models.csproj">
+      <Project>{044d28b2-f142-410c-ae2f-7d14693190f2}</Project>
+      <Name>SQLPlus.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "PaypalSpinner";
+    //Layout = "~/Views/Shared/_BlankLayout.cshtml";
+}
+
+@section styles{
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,300italic,300,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href="~/Content/styles/paypal-loader.css" rel="stylesheet" />
+}
+
+
+<div id="preloaderSpinner" class="preloader spinner">
+    <div class="spinWrap">
+        <p class="loader"></p>
+        <p class="loadingMessage" id="spinnerMessage" style="display:none">Securely logging you in...</p>
+        <p class="loadingSubHeading" id="spinnerSubHeading" style="display:none">I like this</p>
+    </div>
+</div>
+
+
+@section scripts{
+}

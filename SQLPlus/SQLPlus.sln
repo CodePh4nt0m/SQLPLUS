@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLPlus.Web", "SQLPlus.Web\SQLPlus.Web.csproj", "{7D004077-663A-429E-B71C-7C699575ADE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLPlus.Models", "SQLPlus.Models\SQLPlus.Models.csproj", "{044D28B2-F142-410C-AE2F-7D14693190F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLPlus.DataEntity", "SQLPlus.DataEntity\SQLPlus.DataEntity.csproj", "{E1F72CEE-3DBE-4611-BE78-105C77EC28C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLPlus.Business", "SQLPlus.Business\SQLPlus.Business.csproj", "{23B0E513-60A0-41BA-9AC4-F274D5F16946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{7D004077-663A-429E-B71C-7C699575ADE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D004077-663A-429E-B71C-7C699575ADE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D004077-663A-429E-B71C-7C699575ADE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044D28B2-F142-410C-AE2F-7D14693190F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044D28B2-F142-410C-AE2F-7D14693190F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044D28B2-F142-410C-AE2F-7D14693190F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044D28B2-F142-410C-AE2F-7D14693190F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F72CEE-3DBE-4611-BE78-105C77EC28C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F72CEE-3DBE-4611-BE78-105C77EC28C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F72CEE-3DBE-4611-BE78-105C77EC28C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F72CEE-3DBE-4611-BE78-105C77EC28C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B0E513-60A0-41BA-9AC4-F274D5F16946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B0E513-60A0-41BA-9AC4-F274D5F16946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B0E513-60A0-41BA-9AC4-F274D5F16946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B0E513-60A0-41BA-9AC4-F274D5F16946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

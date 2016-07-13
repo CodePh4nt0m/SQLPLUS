@@ -26,6 +26,31 @@ namespace SQLPlus.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
+                        "~/Scripts/knockout-{version}.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/director").Include(
+                        "~/Scripts/director.js"));
+
+            // pixel admin bundles
+            bundles.Add(new ScriptBundle("~/bundles/pixeladmin").Include(
+                        "~/javascripts/jquery.transit.min.js",
+                        "~/javascripts/bootstrap.min.js",
+                        "~/javascripts/pixel-admin.min.js"));
+
+            bundles.Add(new StyleBundle("~/styles/pixeladmin").Include(
+                      "~/stylesheets/bootstrap.min.css",
+                      "~/stylesheets/pixel-admin.min.css",
+                      "~/stylesheets/widgets.min.css",
+                      "~/stylesheets/pages.min.css",
+                      "~/stylesheets/rtl.min.css",
+                      "~/stylesheets/themes.min.css"));
+            // end pixel admin
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/Scripts/app/app.js",
+                        "~/Scripts/app/routes.js"));
         }
     }
 }
